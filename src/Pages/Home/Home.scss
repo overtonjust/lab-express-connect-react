@@ -5,6 +5,7 @@
     width: 600px;
     padding: 4px;
 
+
     &__headers{
         display: grid;
         grid-template-columns: repeat(3, 1fr);
@@ -24,11 +25,16 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         place-items: center;
-        column-gap: 80px;
+        column-gap: 100px;
     }
     
     &__text{
         text-align: center;
         text-decoration: none;
+        color: black;
+    }
+
+    &__icon {
+        color: rgb(217, 111, 25);
     }
 }

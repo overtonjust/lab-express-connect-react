@@ -1,5 +1,5 @@
 // Dependencies
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 // Pages
 import Home from "./Pages/Home/Home";
@@ -16,6 +16,7 @@ function App() {
     <main>
       <Navbar/>
       <Routes>
+        <Route path='/' element={<Navigate to='/logs'/>} />
         <Route path="/logs" index element={<Home/>}/>
         <Route path="/logs/new" element={<New/>}/>
         <Route path="/logs/:index" element={<Show/>}/>

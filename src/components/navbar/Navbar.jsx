@@ -1,6 +1,7 @@
 // Dependencies
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { LuScrollText } from "react-icons/lu";
 import './Navbar.scss'
 
 const Navbar = () => {
@@ -9,9 +10,7 @@ const Navbar = () => {
             <h1 className='navbar__title'>
                 <Link to='/logs' className='navbar__link'>Captain's Log</Link>
             </h1>
-            <button className='navbar__button'>
-                <Link to='/logs/new' className='navbar__link'>New Log</Link>
-            </button>
+            <Link to='/logs/new' className='navbar__link'><LuScrollText className='navbar__button'/></Link>
         </nav>
     );
 };

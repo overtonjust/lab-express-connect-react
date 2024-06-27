@@ -1,0 +1,19 @@
+
+.showcard {
+    margin-left: 12em ;
+
+    &__title{
+        font-style: italic;
+        margin: 10px 0 0;
+    }
+
+    &__details{
+        display: flex;
+        gap: 2px;
+        margin-left: 1em;
+    }
+
+    &__name {
+        font-weight: 600;
+    }
+}

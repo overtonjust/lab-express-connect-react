@@ -1,6 +1,7 @@
 // Dependencies
 import React, { useEffect, useState } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
+import './Show.scss'
 
 const Show = () => {
     const [loading, setLoading] = useState(false);
@@ -33,22 +34,20 @@ const Show = () => {
             .catch(err => console.error(err))
     }
 
-
+    if(loading) return <div>Loading...</div>
     return (
-        <>
-            {loading ? <div>Loading...</div> 
-            : 
-                <article className='showcard'>
-                    <h1 className='showcard__name'>{captain.captainName}</h1>
-                    <h1 className='showcard__title'>{captain.title}</h1>
-                    <h1 className='showcard__post'>{captain.post}</h1>
-                    <h1 className='showcard__mistakes'>{captain.mistakesWereMadeToday}</h1>
-                    <h1 className='showcard__title'>{captain.daysSinceLastCrisis}</h1>
-                    <button><Link to='/logs'>Back</Link></button>
-                    <button><Link to={`/logs/${index}/edit`}>Edit</Link></button>
-                    <button onClick={handleDelete}>Delete</button>
-                </article>
-            }
+        <> 
+            <article className='showcard'>
+                <h2 className='showcard__title'>{captain.title}</h2>
+                <div className="showcard__details">
+                    <p className='showcard__crisis'>[LC:{captain.daysSinceLastCrisis} D]</p>
+                    <p className='showcard__name'>{captain.captainName}:</p>
+                    <p className='showcard__post'>{captain.post}</p>
+                </div>
+            </article>
+            <button><Link to='/logs'>Back</Link></button>
+            <button><Link to={`/logs/${index}/edit`}>Edit</Link></button>
+            <button onClick={handleDelete}>Delete</button>
         </>
     );
 };

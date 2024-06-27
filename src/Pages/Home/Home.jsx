@@ -1,6 +1,7 @@
 // Dependencies
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { GiCornerExplosion } from "react-icons/gi";
 import './Home.scss'
 
 const Home = () => {
@@ -24,9 +25,9 @@ const Home = () => {
     return (
         <main className='dashboard'>
             <header className='dashboard__headers'>
-                <h4 className='dashboard__header'>Mistakes</h4>
-                <h4 className='dashboard__header'>Captain Name</h4>
-                <h4 className='dashboard__header'>See this log</h4>
+                <h3 className='dashboard__header'>Mistakes</h3>
+                <h3 className='dashboard__header'>Captain Name</h3>
+                <h3 className='dashboard__header'>See this log</h3>
             </header>
             <ul className='dashboard__list'>
                 {loading ? <div>loading...</div> 
@@ -34,7 +35,7 @@ const Home = () => {
                     logs.map((log, index) => {
                         return(
                             <li className='dashboard__list-item' key={index}>
-                                <Link className='dashboard__text' to='/' >{log.mistakesWereMadeToday ? 'yup' : 'nope'}</Link>
+                                <Link className='dashboard__text' to='/' >{log.mistakesWereMadeToday ? <GiCornerExplosion className='dashboard__icon'/> : ''}</Link>
                                 <Link className='dashboard__text' to={`/logs/${index}`} >{log.captainName}</Link>
                                 <Link className='dashboard__text' to={`/logs/${index}`} >{log.title}</Link>
                             </li>
