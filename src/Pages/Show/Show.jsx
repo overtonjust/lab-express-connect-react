@@ -23,11 +23,7 @@ const Show = () => {
 
     const handleDelete = () => {
         fetch(`${APIKEY}/${index}`, {
-            method: 'DELETE',
-            body: JSON.stringify(captain),
-            headers: {
-                "Content-Type": "application/json"
-            }
+            method: 'DELETE'
         })
             .then(res => res.json())
             .then(res => {
