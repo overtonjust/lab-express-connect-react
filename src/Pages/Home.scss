@@ -1,0 +1,34 @@
+
+
+.dashboard{
+    margin: 10px auto;
+    width: 600px;
+    padding: 4px;
+
+    &__headers{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        border-bottom: 1px solid gray;
+    }
+
+    &__header{
+
+    }
+
+    &__list{
+        list-style-type: none;
+    }
+    
+    &__list-item{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        place-items: center;
+        column-gap: 80px;
+    }
+    
+    &__text{
+        text-align: center;
+        text-decoration: none;
+    }
+}
