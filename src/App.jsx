@@ -2,7 +2,8 @@
 import { Routes, Route } from "react-router-dom";
 
 // Pages
-import Home from "./Pages/Home";
+import Home from "./Pages/Home/Home";
+import Show from "./Pages/Show/Show";
 
 // Components
 import Navbar from "./components/navbar/Navbar";
@@ -13,7 +14,8 @@ function App() {
     <main>
       <Navbar/>
       <Routes>
-        <Route path="/" element={<Home/>}/>
+        <Route path="/logs" index element={<Home/>}/>
+        <Route path="/logs/:index" element={<Show/>}/>
       </Routes>
     </main>
   );

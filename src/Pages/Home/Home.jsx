@@ -1,6 +1,6 @@
 // Dependencies
 import React, { useEffect, useState } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import './Home.scss'
 
 const Home = () => {
@@ -35,8 +35,8 @@ const Home = () => {
                         return(
                             <li className='dashboard__list-item' key={index}>
                                 <Link className='dashboard__text' to='/' >{log.mistakesWereMadeToday ? 'yup' : 'nope'}</Link>
-                                <Link className='dashboard__text' to='/' >{log.captainName}</Link>
-                                <Link className='dashboard__text' to='/' >{log.title}</Link>
+                                <Link className='dashboard__text' to={`/logs/${index}`} >{log.captainName}</Link>
+                                <Link className='dashboard__text' to={`/logs/${index}`} >{log.title}</Link>
                             </li>
                         )
                     })
