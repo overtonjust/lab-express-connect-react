@@ -37,17 +37,17 @@ const Show = () => {
     if(loading) return <div>Loading...</div>
     return (
         <> 
+            <button className='showcard__back'><Link className='showcard__link' to='/logs'> - Back</Link></button>
             <article className='showcard'>
                 <h2 className='showcard__title'>{captain.title}</h2>
                 <div className="showcard__details">
                     <p className='showcard__crisis'>[LC:{captain.daysSinceLastCrisis} D]</p>
                     <p className='showcard__name'>{captain.captainName}:</p>
                     <p className='showcard__post'>{captain.post}</p>
+                    <button className='showcard__button'><Link className='showcard__link' to={`/logs/${index}/edit`}>Edit</Link></button>
+                    <button className='showcard__button' onClick={handleDelete}>Delete</button>
                 </div>
             </article>
-            <button><Link to='/logs'>Back</Link></button>
-            <button><Link to={`/logs/${index}/edit`}>Edit</Link></button>
-            <button onClick={handleDelete}>Delete</button>
         </>
     );
 };
