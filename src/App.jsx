@@ -1,5 +1,6 @@
 // Dependencies
 import { Routes, Route, Navigate } from "react-router-dom";
+import './App.scss'
 
 // Pages
 import Home from "./Pages/Home/Home";

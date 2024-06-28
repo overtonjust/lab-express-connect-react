@@ -74,22 +74,28 @@ const New = () => {
                     onChange={handleChange}
                 />
                 <br/>
-                <input 
-                    type="checkbox"
-                    id="mistakes"
-                    checked={newCaptain.mistakesWereMadeToday}
-                    onChange={handleCheckBox}
-                />
-                <label htmlFor="mistakes">Mistakes were made</label>
+                <div className='form-box'>
+                    <label htmlFor="mistakes">Mistakes were made</label>
+                    <input 
+                        className='check-box'
+                        type="checkbox"
+                        id="mistakes"
+                        checked={newCaptain.mistakesWereMadeToday}
+                        onChange={handleCheckBox}
+                    />
+                </div>
                 <br/>
-                <input 
-                    type="number" 
-                    id="crisis"
-                    name="daysSinceLastCrisis"
-                    value={newCaptain.daysSinceLastCrisis}
-                    onChange={handleChange}
-                />
-                <label htmlFor="crisis">Days since last crisis</label>
+                <div className='form-box'>
+                    <label htmlFor="crisis">Days since last crisis</label>
+                    <input 
+                        className='number-box'
+                        type="number" 
+                        id="crisis"
+                        name="daysSinceLastCrisis"
+                        value={newCaptain.daysSinceLastCrisis}
+                        onChange={handleChange}
+                    />
+                </div>
                 <br/>
                 <input type="submit" value="Submit"/>
             </fieldset>

@@ -1,0 +1,41 @@
+form {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.form-box {
+    display: flex;
+    align-items: center;
+
+}
+
+input {
+    width: 100%;
+    background: none;
+    border: none;
+    border-bottom: 2px solid black;
+
+}
+input::placeholder {
+    color: rgba(0, 0, 0,.6);
+}
+
+label {
+    margin-top: 5px;
+    width: 45%;
+}
+
+.check-box {
+    width: 10%;
+    cursor: pointer;
+}
+
+.number-box {
+    width: 10%;
+    text-align: center;
+    border: 2px solid black;
+}
+
+fieldset {
+    border: 1px solid black;
+}
